@@ -9,5 +9,5 @@ git clone https://github.com/RobotsLab/AML.git aml
 
 cd aml/aml_docker
 
-./docker_build.sh indigo
-./build_aml.sh dev:indigo
+./docker_build.sh kinetic-cuda
+./build_aml.sh dev:kinetic-cuda
