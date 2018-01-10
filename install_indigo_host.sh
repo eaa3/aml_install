@@ -8,4 +8,6 @@ git clone https://github.com/RobotsLab/AML.git aml
 
 cd aml/aml_scripts
 
+./install_indigo_deps.sh
+
 source setup_rospkg_deps.sh
