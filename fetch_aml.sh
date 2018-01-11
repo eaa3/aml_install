@@ -2,7 +2,8 @@
 
 ROOT_DIR="$( cd "$( dirname '${BASH_SOURCE[0]}' )" && pwd )"
 CATKIN_WS_PATH=$1
-AML_BRANCH=aml_dev
+AML_BRANCH=$(cat aml.branch)
+SHALLOW_CLONE='n'
 
 if [ -z "$CATKIN_WS_PATH" ]
 then
@@ -21,17 +22,23 @@ then
 
 fi
 
+
+
+# Backing up existing aml directory, if it exists
+rm -rf aml.bkp > /dev/null 2>&1
+mv -f -b ${CATKIN_WS_PATH}/src/aml ${ROOT_DIR}/aml.bkp > /dev/null 2>&1
+mkdir -p ${CATKIN_WS_PATH}/src
+
 CATKIN_WS_ABS_PATH="$( cd "$( dirname "${CATKIN_WS_PATH}/." )" && pwd )"
 AML_ABS_PATH="${CATKIN_WS_ABS_PATH}/src/aml"
 echo ${AML_ABS_PATH}
 
-# Backing up existing aml directory, if it exists
-rm -rf aml.bkp > /dev/null 2>&1
-mv -f -b ${AML_ABS_PATH} ${ROOT_DIR}/aml.bkp > /dev/null 2>&1
-mkdir -p ${CATKIN_WS_ABS_PATH}/src
+CLONE_DEPTH=""
+if echo "$SHALLOW_CLONE" | grep -iq "^y" ;then
+	CLONE_DEPTH="--depth 1"
+fi
+
+git clone ${CLONE_DEPTH} -b ${AML_BRANCH} https://github.com/RobotsLab/AML.git ${AML_ABS_PATH}
 
 
-git clone -b ${AML_BRANCH} https://github.com/RobotsLab/AML.git ${AML_ABS_PATH}
-
-
-echo ${AML_ABS_PATH} > aml_path.txt
+echo ${AML_ABS_PATH} > .aml_path
