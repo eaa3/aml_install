@@ -25,6 +25,7 @@ Modify `aml.branch` to contain your desired AML branch name.
 
   * Also install nvidia-modprobe by running `sudo apt-get install nvidia-modprobe`, possibly a reboot is required.
 
+## Setting up AML with docker
 
 The example below sets up a docker image with ubuntu 14.04, GPU acceleation, ROS indigo and all other required dependencies for AML. It creates a default catkin workspace located at `$HOME/Projects/aml_ws`.
 
