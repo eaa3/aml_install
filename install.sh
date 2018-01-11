@@ -5,11 +5,12 @@ INSTALL_TYPE=$1
 
 if [ -z "$INSTALL_TYPE" ]
 then 
-    echo "usage: ./install.sh <install-option>"
+    echo "usage: ./install.sh <install-option> [<optional-path-to-catkin-workspace>]"
     echo "example: ./install.sh indigo_gpu_docker"
+    echo "install options: "
 	exit 1
 fi
 
 git clone --depth 1 -b master https://github.com/eaa3/aml_install.git /tmp/aml_install
 cd /tmp/aml_install
-./install_${INSTALL_TYPE}.sh
+./install_${INSTALL_TYPE}.sh $2
