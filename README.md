@@ -35,4 +35,4 @@ The example below sets up a docker image with ubuntu 14.04, GPU acceleation, ROS
 
 The example below assumes a fresh install of ubuntu 14.04. It installs ROS indigo and all other required dependencies for AML (obs.: without GPU acceleration).
 
-`curl -s https://raw.githubusercontent.com/eaa3/aml_install/master/install_indigo_host.sh | bash -s`
+`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install_indigo_host.sh)"`

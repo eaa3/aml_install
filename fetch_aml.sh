@@ -12,7 +12,6 @@ then
     CATKIN_WS_PATH=${HOME}/Projects/aml_ws/
 	echo "This script will create a default catkin workpace at ${CATKIN_WS_PATH}, proceed? (y/n)"
 	
-	answer='y'
 	read answer
 	if echo "$answer" | grep -iq "^y" ;then
 		echo "Fetching AML..."
