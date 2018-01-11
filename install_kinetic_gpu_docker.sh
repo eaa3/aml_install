@@ -1,13 +1,14 @@
 #!/bin/bash
 
 
-mkdir -p $HOME/Projects/aml_ws/src
-cd $HOME/Projects/aml_ws/src
+ROOT_DIR="$( cd "$( dirname '${BASH_SOURCE[0]}' )" && pwd )"
 
-rm -rf aml
-git clone https://github.com/RobotsLab/AML.git aml
+${ROOT_DIR}/fetch_aml.sh $1
+AML_PATH=$(cat $ROOT_DIR/aml_path.txt)
 
-cd aml/aml_docker
+cd ${AML_PATH} && git checkout aml_dev
+cd aml_docker
+
 
 ./docker_build.sh kinetic-cuda
 ./build_aml.sh dev:kinetic-cuda

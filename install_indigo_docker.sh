@@ -1,13 +1,13 @@
 #!/bin/bash
 
+ROOT_DIR="$( cd "$( dirname '${BASH_SOURCE[0]}' )" && pwd )"
 
-mkdir -p $HOME/Projects/aml_ws/src
-cd $HOME/Projects/aml_ws/src
+${ROOT_DIR}/fetch_aml.sh $1
+AML_PATH=$(cat $ROOT_DIR/aml_path.txt)
 
-rm -rf aml
-git clone https://github.com/RobotsLab/AML.git aml
+cd ${AML_PATH} && git checkout aml_dev
+cd aml_docker
 
-cd aml/aml_docker
 
 ./docker_build.sh indigo
 ./build_aml.sh dev:indigo
