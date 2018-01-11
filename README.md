@@ -28,7 +28,7 @@ Modify `aml.branch` to contain your desired AML branch name.
 
 The example below sets up a docker image with ubuntu 14.04, GPU acceleation, ROS indigo and all other required dependencies for AML.
 
-`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install_indigo_gpu_docker.sh)"`
+`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)"`
 
 
 ## Setting up host computer without docker
