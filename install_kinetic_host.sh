@@ -11,6 +11,6 @@ cd ${AML_PATH} && git checkout ${AML_BRANCH}
 
 cd aml_scripts
 
-sudo ./install_kinetic_deps.sh
+./install_kinetic_deps.sh
 
 source setup_rospkg_deps.sh
