@@ -3,7 +3,7 @@
 INSTALL_TYPE=$0
 
 
-if [ -z "$INSTALL_TYPE" ]
+if [ -z "$INSTALL_TYPE" ] || [ "$INSTALL_TYPE" == "bash" ]
 then 
     echo "usage: ./install.sh <install-option> [<optional-path-to-catkin-workspace>]"
     echo "example: ./install.sh indigo_gpu_docker"
