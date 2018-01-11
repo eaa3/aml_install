@@ -1,5 +1,5 @@
 # AML Installation Step-by-Step
-public install script for the Advanced Manipulation Learning (AML) framework. 
+public install scripts for the Advanced Manipulation Learning (AML) framework. 
 
 ## Select AML branch
 
