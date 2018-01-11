@@ -5,7 +5,27 @@ public install scripts for the Advanced Manipulation Learning (AML) framework.
 
 Modify `aml.branch` to contain your desired AML branch name.
 
-## Setting up docker
+## Setting up docker and (optional) nvidia-docker
+
+1. Install Docker CE, see [installation instructions](https://docs.docker.com/engine/installation/). 
+⋅⋅* Also perform the [post installation instructions](https://docs.docker.com/engine/installation/linux/linux-postinstall/), so that docker can be run without requiring root privileges by a non-root user. (this is optional, otherwise, scripts must be run as root)  
+2. (optional) If you have an NVIDIA graphic card, install the latest drivers.
+..* Recommended method: 
+
+	```
+	sudo add-apt-repository ppa:graphics-drivers/ppa
+	sudo apt update
+	```
+
+	Then, on Ubuntu from the menu / Dash, click on the "Additional Drivers" and on the tab with the same name, select the driver you want to use, and "Apply changes". Wait until the driver is downloaded and installed, and reboot.
+
+..* Install NVIDIA CUDA 8.0 GA2 by following the [oficial instructions](https://developer.nvidia.com/cuda-downloads?target_os=Linux), see legacy releases (.deb local install recommended).
+
+
+3. (optional) If you have an NVIDIA graphic card and is using Ubuntu 16.04, install nvidia-docker 1.0. See [installation instructions](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-1.0)). 
+
+..* Also install nvidia-modprobe by running `sudo apt-get install nvidia-modprobe`, possibly reboot required.
+
 
 The example below sets up a docker image with ubuntu 14.04, GPU acceleation, ROS indigo and all other required dependencies for AML.
 
