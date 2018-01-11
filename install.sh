@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INSTALL_TYPE=$1
+INSTALL_TYPE=$0
 
 
 if [ -z "$INSTALL_TYPE" ]
@@ -14,4 +14,4 @@ fi
 rm -rf /tmp/aml_install
 git clone --depth 1 -b master https://github.com/eaa3/aml_install.git /tmp/aml_install
 cd /tmp/aml_install
-./install_${INSTALL_TYPE}.sh $2
+./install_${INSTALL_TYPE}.sh $1
