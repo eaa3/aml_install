@@ -17,6 +17,7 @@ cd aml_docker
 
 ./docker_build.sh dummy
 echo "dummy aml build: ./build_aml.sh dev:dummy"
+# ./build_aml.sh dev:dummy
 
 rm ${ROOT_DIR}/aml.branch > /dev/null 2>&1
 mv ${ROOT_DIR}/aml.branchbkp ${ROOT_DIR}/aml.branch > /dev/null 2>&1
