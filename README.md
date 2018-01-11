@@ -27,11 +27,11 @@ Modify `aml.branch` to contain your desired AML branch name.
 
 ## Setting up AML with docker
 
-The example below sets up a docker image with ubuntu 14.04, GPU acceleation, ROS indigo and all other required dependencies for AML. It creates a default catkin workspace located at `$HOME/Projects/aml_ws`.
+The example below sets up a docker image with ubuntu 14.04, GPU acceleration, ROS indigo and all other required dependencies for AML. It creates a default catkin workspace located at `$HOME/Projects/aml_ws`.
 
 `bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker`
 
-You can choose other docker builds see full list below:
+You can choose other docker builds. See list below:
 
   * indigo_gpu_docker
   * indigo_docker
