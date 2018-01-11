@@ -26,9 +26,21 @@ Modify `aml.branch` to contain your desired AML branch name.
   * Also install nvidia-modprobe by running `sudo apt-get install nvidia-modprobe`, possibly a reboot is required.
 
 
-The example below sets up a docker image with ubuntu 14.04, GPU acceleation, ROS indigo and all other required dependencies for AML.
+The example below sets up a docker image with ubuntu 14.04, GPU acceleation, ROS indigo and all other required dependencies for AML. It creates a default catkin workspace located at `$HOME/Projects/aml_ws`.
 
-`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)"`
+`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker`
+
+You can choose other docker builds see full list below:
+
+  * indigo_gpu_docker
+  * indigo_docker
+  * kinetic_gpu_docker
+  * kinetic_docker
+
+If you have your own catkin_workspace path or want to create a different one, you can run the above command with an additional parameter  below:
+
+`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker my/path/to-my-catkin-ws`
+
 
 
 ## Setting up host computer without docker
