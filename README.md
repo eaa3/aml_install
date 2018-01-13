@@ -38,13 +38,17 @@ You can choose other docker builds. See list below:
   * kinetic_gpu_docker
   * kinetic_docker
   
-  After running the script line above you should be able to see a new image set up on your docker tagged as `dev:indigo_gpu_docker`. Now in the AML docker folder located at `$HOME/Projects/aml_ws/src/aml/aml_docker` you will find a set of scripts that will help you run your docker container, among other examples. If you want to open a bash shell to the docker container just built, then execute or source the script `$HOME/Projects/aml_ws/src/aml/aml_docker/bash.sh dev:indigo_gpu_docker` (note the built docker image tag passed as argument to the script).
+After running the script line above you should be able to see a new image set up on your docker and tagged as `dev:indigo_gpu_docker`. You should be able to list it by doing `docker images`. 
 
-### Alternative way building the AML docker
+Now in the AML docker folder located at `$HOME/Projects/aml_ws/src/aml/aml_docker` you will find a set of scripts that will help you run your docker container, among other examples. For instance, if you want to open a bash shell to the docker container just built, then execute or source the script `$HOME/Projects/aml_ws/src/aml/aml_docker/bash.sh dev:indigo_gpu_docker` (note image tag is passed as argument to the script).
 
-If you have your own catkin_workspace path or want to create a different one, you can run the above command with an additional parameter  below:
+### Alternative options upon building the AML docker
+
+If you want to create a different one for the aml catkin workspace created for docker, you can run the above command with an additional parameter below:
 
 `bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker my/path/to-my-catkin-ws`
+
+  * Remember, you do not need to have ROS installed in the host machine. The path for catkin workspace is created in the host so as to make it available for the docker container later, see aml_docker scripts at `$HOME/Projects/aml_ws/src/aml/aml_docker`.
 
 ## Setting up host computer without docker
 
