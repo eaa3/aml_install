@@ -40,7 +40,18 @@ You can choose other docker builds. See list below:
   
 After running the script line above you should be able to see a new image set up on your docker and tagged as `dev:indigo_gpu_docker`. You should be able to list it by doing `docker images`. 
 
-Now in the AML docker folder located at `$HOME/Projects/aml_ws/src/aml/aml_docker` you will find a set of scripts that will help you run your docker container, among other examples. For instance, if you want to open a bash shell to the docker container just built, then execute or source the script `$HOME/Projects/aml_ws/src/aml/aml_docker/bash.sh dev:indigo_gpu_docker` (note image tag is passed as argument to the script).
+## Test if the install works
+
+Now in the AML docker folder located at `$HOME/Projects/aml_ws/src/aml/aml_docker` you will find a set of scripts that will help you run your docker container, among other examples. For instance, if you want to open a bash shell to the docker container just built, then execute or source the script:
+
+`$HOME/Projects/aml_ws/src/aml/aml_docker/bash.sh dev:indigo_gpu_docker` 
+(note image tag is passed as argument to the script).
+
+This should open a a bash shell and spin the container. Check if RVIZ is running in the container by running in the bash shell opened:
+
+`roscore & rosrun rviz rviz`
+
+This should open an X window on your host machine with RVIZ. That means your docker is being hardware accelerated and able to use the host GPU for 3D rendering.
 
 ### Alternative options upon building the AML docker
 
