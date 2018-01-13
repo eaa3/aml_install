@@ -55,7 +55,7 @@ This should open an X window on your host machine with RVIZ. That means your doc
 
 ### Alternative options upon building the AML docker
 
-If you want to create a different one for the aml catkin workspace created for docker, you can run the above command with an additional parameter below:
+If you want to create a different catkin workspace created for the aml docker, you can run the above command with an additional parameter below:
 
 `bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker my/path/to-my-catkin-ws`
 
