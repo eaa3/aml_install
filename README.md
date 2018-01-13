@@ -5,7 +5,7 @@ Public install scripts for the Advanced Manipulation Learning (AML) framework.
 
 Modify `aml.branch` to contain your desired AML branch name.
 
-## Setting up docker and (optional) nvidia-docker
+## Host machine requirements: setting up docker and (optional) nvidia-docker
 
 1. Install Docker CE, see [installation instructions](https://docs.docker.com/engine/installation/). 
 
