@@ -27,7 +27,7 @@ Modify `aml.branch` to contain your desired AML branch name.
 
 ## Setting up AML with docker
 
-The example below sets up a docker image with ubuntu 14.04, GPU acceleration, ROS indigo and all other required dependencies for AML. It creates a default catkin workspace located at `$HOME/Projects/aml_ws`.
+The example below sets up a docker image with ubuntu 14.04, GPU acceleration, ROS indigo and all other required dependencies for AML. It creates a default catkin workspace located at `$HOME/Projects/aml_ws`. The host machine does not have to have ROS installed. It only needs to have docker and (optionally) nvidia-docker.
 
 `bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker`
 
@@ -37,12 +37,14 @@ You can choose other docker builds. See list below:
   * indigo_docker
   * kinetic_gpu_docker
   * kinetic_docker
+  
+  After running the script line above you should be able to see a new image set up on your docker tagged as `dev:indigo_gpu_docker`. Now in the AML docker folder located at `$HOME/Projects/aml_ws/src/aml/aml_docker` you will find a set of scripts that will help you run your docker container, among other examples. If you want to open a bash shell to the docker container just built, then execute or source the script `$HOME/Projects/aml_ws/src/aml/aml_docker/bash.sh dev:indigo_gpu_docker` (note the built docker image tag passed as argument to the script).
+
+### Alternative way building the AML docker
 
 If you have your own catkin_workspace path or want to create a different one, you can run the above command with an additional parameter  below:
 
 `bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker my/path/to-my-catkin-ws`
-
-
 
 ## Setting up host computer without docker
 
