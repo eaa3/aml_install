@@ -29,7 +29,7 @@ Modify `aml.branch` to contain your desired AML branch name.
 
 The example below sets up a docker image with ubuntu 14.04, GPU acceleration, ROS indigo and all other required dependencies for AML. It creates a default catkin workspace located at `$HOME/Projects/aml_ws`. The host machine does not have to have ROS installed. It only needs to have docker and (optionally) nvidia-docker.
 
-`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker`
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker`
 
 You can choose other docker builds. See list below:
 
@@ -57,7 +57,7 @@ This should open an X window on your host machine with RVIZ. That means your doc
 
 If you want to create a different catkin workspace created for the aml docker, you can run the above command with an additional parameter below:
 
-`bash -c "$(curl https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker my/path/to-my-catkin-ws`
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/eaa3/aml_install/master/install.sh)" indigo_gpu_docker my/path/to-my-catkin-ws`
 
   * Remember, you do not need to have ROS installed in the host machine. The path for catkin workspace is created in the host so as to make it available for the docker container later, see aml_docker scripts at `$HOME/Projects/aml_ws/src/aml/aml_docker`.
 
