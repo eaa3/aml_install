@@ -38,13 +38,13 @@ You can choose other docker builds. See list below:
   * kinetic_gpu_docker
   * kinetic_docker
   
-After running the script line above you should be able to see a new image set up on your docker and tagged as `dev:indigo_gpu_docker`. You should be able to list it by doing `docker images`. 
+After running the script line above you should be able to see a new image set up on your docker and tagged as `dev:indigo-cuda`. You should be able to list it by doing `docker images`. 
 
 ## Test if the install works
 
 Now in the AML docker folder located at `$HOME/Projects/aml_ws/src/aml/aml_docker` you will find a set of scripts that will help you run your docker container, among other examples. For instance, if you want to open a bash shell to the docker container just built, then execute or source the script:
 
-`$HOME/Projects/aml_ws/src/aml/aml_docker/bash.sh dev:indigo_gpu_docker` 
+`$HOME/Projects/aml_ws/src/aml/aml_docker/bash.sh dev:indigo-cuda` 
 (note image tag is passed as argument to the script).
 
 This should open a a bash shell and spin the container. Check if RVIZ is running in the container by running in the bash shell opened:
