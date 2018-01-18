@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT_DIR="$( cd "$( dirname '${BASH_SOURCE[0]}' )" && pwd )"
+ROOT_DIR="$(cd $( dirname ${BASH_SOURCE[0]} ) && pwd)"
 CATKIN_WS_PATH=$1
 AML_BRANCH=$(cat aml.branch)
 SHALLOW_CLONE='y'
