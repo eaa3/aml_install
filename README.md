@@ -17,7 +17,7 @@ Public install scripts for the Advanced Manipulation Learning (AML) framework.
 	Then, on Ubuntu from the menu / Dash, click on the "Additional Drivers" and on the tab with the same name, select the driver you want to use, and "Apply changes". Wait until the driver is downloaded and installed, and reboot.
 
 
-3. (optional) If you have an NVIDIA graphic card and Ubuntu 16.04, install nvidia-docker 1.0. See [installation instructions](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-1.0)).
+3. (optional) If you have an NVIDIA graphic card and Ubuntu 16.04, install nvidia-docker 1.0. See [installation instructions](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-1.0)). If you are on Ubuntu 14.04, you can install nvidia-docker following the instructions [here](https://github.com/NVIDIA/nvidia-docker/tree/1.0), see "Ubuntu distributions" instructions.
 
   * Also install nvidia-modprobe by running `sudo apt-get install nvidia-modprobe`, a reboot may be required.
 
